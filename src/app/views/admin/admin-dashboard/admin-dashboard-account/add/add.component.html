@@ -1,0 +1,42 @@
+<div class="container">
+    <form [formGroup]="loginTypeForm">
+        <div class="row">
+            <div class="col-3">
+                <div class="formsix-pos">
+                    <div class="form-group i-tel">
+                        <input formControlName="email" type="tel" class="form-control" placeholder="Tên tài khoản" />
+                    </div>
+                    <div class="form-group i-tel">
+                        <input formControlName="name" type="tel" class="form-control" placeholder="Tên doanh nghiệp" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="formsix-pos">
+                    <div class="form-group i-tel">
+                        <input formControlName="website" type="tel" class="form-control" placeholder="Website" />
+                    </div>
+                    <div class="form-group i-tel">
+                        <input formControlName="phone" type="tel" class="form-control" placeholder="Sđt " />
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="formsix-pos">
+                    <div class="form-group i-tel">
+                        <input formControlName="address" type="tel" class="form-control" placeholder="Địa chỉ" />
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+    <div class="login_btn_wrapper">
+        <button class="btn btn-primary w-100 my-2" (click)="onLoginn()">
+        Tạo mới
+      </button>
+    </div>
+</div>

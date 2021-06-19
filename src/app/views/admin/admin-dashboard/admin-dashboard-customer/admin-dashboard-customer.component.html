@@ -1,0 +1,27 @@
+<div class="p-4">
+
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th scope="col">Mã khách hàng</th>
+                <th scope="col">Tên khách hàng</th>
+                <th scope="col">Sđt</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let user of Userlist">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.address}}</td>
+                <td><button class="btn" (click)="edits(user.id)">Chỉnh sửa</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <button class="btn btn-primary float-right px-4 mr-4" (click)="creates()">Thêm</button>
+</div>

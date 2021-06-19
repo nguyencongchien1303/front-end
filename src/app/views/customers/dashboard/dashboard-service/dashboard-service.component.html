@@ -1,0 +1,36 @@
+<div class="service-container">
+    <!-- items list -->
+    <div class="items-list">
+        <ng-container *ngFor="let item of dataDealPackage">
+            <!-- item -->
+            <div class="card my-4 p-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                <span style="font-weight: bold">Mã dịch vụ: </span> {{ item.id }}
+                            </div>
+                            <div class="col-6">
+                                <span style="font-weight: bold">Thông tin chi tiết: </span
+                >{{ item.description }}
+              </div>
+            </div>
+            <span style="font-weight: bold">Tình trạng: </span> {{ item.type }}
+                            </div>
+                            <div class="col-2">
+                                <!-- <button class="btn btn-buy">Mua gói dịch vụ</button> -->
+                                <div class="form-check">
+                                    <input value="{{ item.id }}" (change)="onCheckboxChange(item, $event)" type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </ng-container>
+        </div>
+        <!-- pay section -->
+        <div class="pay-section">
+            <button class="btn btn-buy float-right mr-4" (click)="onSubmit()">
+      Thanh toán
+    </button>
+        </div>
+        </div>

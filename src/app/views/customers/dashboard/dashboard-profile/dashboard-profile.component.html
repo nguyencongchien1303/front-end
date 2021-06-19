@@ -1,0 +1,52 @@
+<div class="profile-container">
+  <!-- profile form -->
+  <div class="row profile-form">
+    <div class="col-2">
+      <div class="form-inline pt-2">
+        <label>Tên</label>
+      </div>
+      <div class="form-inline pt-3">
+        <label>Ngày sinh</label>
+      </div>
+      <div class="form-inline pt-3">
+        <label>Số điện thoại</label>
+      </div>
+      <div class="form-inline pt-3">
+        <label>Giới tính</label>
+      </div>
+      <div class="form-inline pt-3">
+        <label>Địa chỉ</label>
+      </div>
+    </div>
+    <form [formGroup]="updateUserTypeForm">
+      <div class="col-4">
+        <div class="form-inline">
+          <input formControlName="name" type="text" class="form-control" />
+        </div>
+        <div class="form-inline">
+          <input formControlName="birthDate" type="date" class="form-control" />
+        </div>
+        <div class="form-inline">
+          <input formControlName="phone" type="text" class="form-control" />
+        </div>
+        <div class="form-inline">
+          <select formControlName="gender" type="text" class="form-control">
+            <option value="1">Nam</option>
+            <option value="2">Nữ</option>
+          </select>
+        </div>
+        <div class="form-inline">
+          <input formControlName="address" type="text" class="form-control" />
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- social media -->
+  <p>Tài khoản mạng xã hội:</p>
+  <ul class="socials">
+    <li><i class="fab fa-facebook fa-2x"></i></li>
+    <li><i class="fab fa-twitter fa-2x"></i></li>
+    <li><i class="fab fa-instagram fa-2x"></i></li>
+  </ul>
+  <button class="btn btn-primary mt-4" (click)="onUpdate()">Cập nhật</button>
+</div>

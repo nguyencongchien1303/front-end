@@ -1,0 +1,63 @@
+<nav class="navbar" style="background-color: #ff6a6a">
+    <img src="../../../assets/Logo.png" height="50px" />
+    <div class="d-flex">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" size="60" />
+            <button class="btn btn-outline-light my-2 my-sm-0 mr-2" type="submit">
+          Tra cứu đơn hàng
+        </button>
+        </form>
+        <img src="../../../assets/Icon account.png" height="50px" />
+    </div>
+</nav>
+<br />
+<div class="container">
+    <div class="row">
+        <!-- banner image -->
+        <div class="col-8">
+            <img src="../../../assets/giao hanh nhanh 1.png" style="height: 450px" />
+        </div>
+        <div class="col-4">
+            <div style="margin-left: 20px; padding: 20px; border: 1px solid #ff6a6a" class="h-100">
+                <div class="container">
+                    <div style="text-align: center">
+                        <h3 for="">Đăng Nhập</h3>
+                    </div>
+                    <div class="row">
+                        <div class="login_wrapper">
+                            <form>
+                                <div class="form-group">
+                                    <div class="formsix-pos">
+                                        <div class="form-group i-email">
+                                            <input formControlName="name" type="email" class="form-control" required="" id="email2" placeholder="Email Address *" />
+                                        </div>
+                                    </div>
+                                    <div class="formsix-e">
+                                        <div class="form-group i-password">
+                                            <input formControlName="password" type="password" class="form-control" required="" id="password2" placeholder="Password *" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="login_remember_box">
+                                <a routerLink="/customer/auth/forgot-password" class="forget_password"> Quên mật khẩu</a>
+                            </div>
+                            <br />
+                            <div class="login_btn_wrapper">
+                                <button class="btn btn-primary w-100 my-2" (click)="onLogin()">
+                    Đăng nhập
+                  </button>
+                            </div>
+                            <div class="login_message">
+                                <p>
+                                    Bạn chưa có tài khoản ?
+                                    <a routerLink="/enterprise/auth/sign-up"> Đăng ký ngay </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

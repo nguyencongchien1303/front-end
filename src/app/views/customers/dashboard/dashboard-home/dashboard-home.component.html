@@ -1,0 +1,21 @@
+<div class="top-section">
+  <form
+    class="form-inline d-flex justify-content-center"
+    [formGroup]="searchTypeForm"
+  >
+    <div class="form-group mx-sm-3 mb-2 w-50 search-form">
+      <input
+        formControlName="phone"
+        type="tel"
+        class="form-control"
+        placeholder="Nhập số điện thoại"
+      />
+    </div>
+    <button (click)="search()" type="submit" class="btn btn-primary mb-2">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
+</div>
+<div class="home-image-wrapper">
+  <img src="assets/giao hanh nhanh 1.png" alt="giaohangnhanh" />
+</div>

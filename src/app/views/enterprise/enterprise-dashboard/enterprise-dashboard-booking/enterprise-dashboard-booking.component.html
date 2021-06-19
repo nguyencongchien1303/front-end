@@ -1,0 +1,28 @@
+<div class="p-4">
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th scope="col">*</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Kiểu</th>
+        <th scope="col">Mô tả</th>
+        <th scope="col">Thao tác</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of data; index as i">
+      <tr>
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.description }}</td>
+
+        <td>
+          <button class="btn" (click)="buyPackage(item.id)">Mua gói</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <button class="btn btn-primary float-right px-4 mr-4">Thêm</button> -->
+</div>

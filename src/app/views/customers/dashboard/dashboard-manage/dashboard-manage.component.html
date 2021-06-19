@@ -1,0 +1,159 @@
+<div class="manage-container">
+  <!-- status -->
+  <span
+    (click)="getAllData()"
+    [class.active]="isActive == 1"
+    class="badge badge-secondary"
+    >Tất cả</span
+  >
+  <span
+    (click)="getDataWaitConfirm()"
+    [class.active]="isActive == 2"
+    class="badge badge-secondary"
+    >Thanh toán thành công</span
+  >
+  <span
+    (click)="getDataWaitGetGoods()"
+    [class.active]="isActive == 3"
+    class="badge badge-secondary"
+    >Chờ lấy hàng</span
+  >
+  <span
+    (click)="getDataShipping()"
+    [class.active]="isActive == 4"
+    class="badge badge-secondary"
+    >Đang khai thác</span
+  >
+  <span
+    (click)="getDataHistory()"
+    [class.active]="isActive == 5"
+    class="badge badge-secondary"
+    >Đang giao hàng</span
+  >
+  <span
+    (click)="getDataCancel()"
+    [class.active]="isActive == 6"
+    class="badge badge-secondary"
+    >Giao hàng thành công</span
+  >
+  <div *ngIf="isActive == 1">
+    <!-- items list -->
+    <ng-container *ngFor="let item of allData">
+      <div class="row service-item">
+        <!-- item -->
+        <div class="col-4">
+          <span>
+            <i class="far fa-clipboard"></i>
+            Mã dịch vụ: {{ item.code }}
+          </span>
+        </div>
+        <div class="col-4">
+          <span>Trạng thái: {{ item.status }} </span>
+        </div>
+        <div class="col-4">
+          <span>Đơn giá: {{ item.price }} Vnđ</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div *ngIf="isActive == 2">
+    <!-- items list -->
+    <ng-container *ngFor="let item of allDataPaymentSuccess">
+      <div class="row service-item">
+        <!-- item -->
+        <div class="col-4">
+          <span>
+            <i class="far fa-clipboard"></i>
+            Mã dịch vụ: {{ item.code }}
+          </span>
+        </div>
+        <div class="col-4">
+          <span>Trạng thái: {{ item.status }} </span>
+        </div>
+        <div class="col-4">
+          <span>Đơn giá: {{ item.price }} Vnđ</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div *ngIf="isActive == 3">
+    <!-- items list -->
+    <ng-container *ngFor="let item of allDataWaitGetGoods">
+      <div class="row service-item">
+        <!-- item -->
+        <div class="col-4">
+          <span>
+            <i class="far fa-clipboard"></i>
+            Mã dịch vụ: {{ item.code }}
+          </span>
+        </div>
+        <div class="col-4">
+          <span>Trạng thái: {{ item.status }} </span>
+        </div>
+        <div class="col-4">
+          <span>Đơn giá: {{ item.price }} Vnđ</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div *ngIf="isActive == 4">
+    <!-- items list -->
+    <ng-container *ngFor="let item of allDataExploit">
+      <div class="row service-item">
+        <!-- item -->
+        <div class="col-4">
+          <span>
+            <i class="far fa-clipboard"></i>
+            Mã dịch vụ: {{ item.code }}
+          </span>
+        </div>
+        <div class="col-4">
+          <span>Trạng thái: {{ item.status }} </span>
+        </div>
+        <div class="col-4">
+          <span>Đơn giá: {{ item.price }} Vnđ</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div *ngIf="isActive == 5">
+    <!-- items list -->
+    <ng-container *ngFor="let item of allDataShipping">
+      <div class="row service-item">
+        <!-- item -->
+        <div class="col-4">
+          <span>
+            <i class="far fa-clipboard"></i>
+            Mã dịch vụ: {{ item.code }}
+          </span>
+        </div>
+        <div class="col-4">
+          <span>Trạng thái: {{ item.status }} </span>
+        </div>
+        <div class="col-4">
+          <span>Đơn giá: {{ item.price }} Vnđ</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div *ngIf="isActive == 6">
+    <!-- items list -->
+    <ng-container *ngFor="let item of allDataSuccess">
+      <div class="row service-item">
+        <!-- item -->
+        <div class="col-4">
+          <span>
+            <i class="far fa-clipboard"></i>
+            Mã dịch vụ: {{ item.code }}
+          </span>
+        </div>
+        <div class="col-4">
+          <span>Trạng thái: {{ item.status }} </span>
+        </div>
+        <div class="col-4">
+          <span>Đơn giá: {{ item.price }} Vnđ</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

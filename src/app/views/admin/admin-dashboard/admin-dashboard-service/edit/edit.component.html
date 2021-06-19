@@ -1,0 +1,43 @@
+<div class="container">
+    <form [formGroup]="loginTypeForm">
+        <div class="row">
+            <div class="col-3">
+                <div class="formsix-pos">
+                    <div class="form-group i-tel">
+                        <input formControlName="id" type="tel" class="form-control" placeholder="Mã dịch vụ" />
+                    </div>
+                    <div class="form-group i-tel">
+                        <input formControlName="name" type="tel" class="form-control" placeholder="Tên dịch vụ" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="formsix-pos">
+                    <div class="form-group i-tel">
+                        <input formControlName="type" type="tel" class="form-control" placeholder="Kiểu" />
+                    </div>
+                    <div class="form-group i-tel">
+                        <input formControlName="price" type="text" class="form-control" placeholder="Giá " />
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="formsix-pos">
+                    <div class="form-group i-tel">
+                        <input formControlName="description" type="tel" class="form-control" placeholder="Miêu tả" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-dark w-100 my-2" (click)="onDelete()">Xoá</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary w-100 my-2" (click)="onUpdate()">
+          Cập nhật
+        </button>
+        </div>
+    </div>
+</div>

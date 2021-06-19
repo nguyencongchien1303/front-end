@@ -1,0 +1,52 @@
+.dashboard-container {
+    height: 100vh;
+}
+
+.left-panel {
+    background-color: var(--color-primary);
+    color: white;
+    position: relative;
+}
+
+a.user-info {
+    color: white;
+    text-decoration: none;
+}
+
+.left-panel .user-info img {
+    border-radius: 50%;
+}
+
+.left-panel .user-info span {
+    text-overflow: ellipsis;
+}
+
+.left-panel ul.navigation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.left-panel ul.navigation-list .navigation-list-item {
+    padding: 5px;
+    margin-bottom: 2em;
+}
+
+.left-panel ul.navigation-list .navigation-list-item.active {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.left-panel ul.navigation-list .navigation-list-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.left-panel ul.navigation-list .navigation-list-item i,
+.left-panel .logout i {
+    margin-right: 5px;
+}
+.left-panel .logout {
+    position: absolute;
+    bottom: 5px;
+    cursor: pointer;
+}

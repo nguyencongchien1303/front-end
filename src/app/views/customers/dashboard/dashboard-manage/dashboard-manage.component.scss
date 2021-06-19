@@ -1,0 +1,21 @@
+.badge {
+  font-weight: normal;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.badge.badge-secondary.active,
+.badge.badge-secondary:hover {
+  background-color: var(--color-orange);
+}
+
+.manage-container {
+  padding: 10px;
+}
+
+.service-item {
+  margin: 15px 10px;
+}

@@ -1,0 +1,55 @@
+<div class="row dashboard-container">
+  <div class="col-2 m-0 left-panel">
+    <div class="p-2">
+      <div class="top-logo">
+        <a routerLink="/"
+          ><img src="/assets/images/panel-logo.png" alt="uteship" width="50%"
+        /></a>
+      </div>
+      <a class="user-info" routerLink="profile">
+        <!-- <img
+          src="/assets/images/cat-default.png"
+          alt="avatar"
+          width="80"
+          height="80"
+        /> -->
+        <h3 class="justify-content-center">{{ name }}</h3>
+      </a>
+      <ul class="navigation-list">
+        <li
+          class="navigation-list-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="home"><i class="fas fa-home fa-2x"></i> Trang chủ </a>
+        </li>
+        <li class="navigation-list-item" routerLinkActive="active">
+          <a routerLink="service"
+            ><i class="fas fa-box-open fa-2x"></i> Gói dịch vụ</a
+          >
+        </li>
+        <li class="navigation-list-item" routerLinkActive="active">
+          <a routerLink="booking"
+            ><i class="far fa-calendar-check fa-2x"></i> Đặt dịch vụ</a
+          >
+        </li>
+        <li class="navigation-list-item" routerLinkActive="active">
+          <a routerLink="manage"
+            ><i class="fas fa-clipboard-list fa-2x"></i> Quản lý giao hàng</a
+          >
+        </li>
+        <li class="navigation-list-item" routerLinkActive="active">
+          <a routerLink="history"
+            ><i class="fas fa-history fa-2x"></i> Lịch sử giao hàng</a
+          >
+        </li>
+      </ul>
+      <div class="logout">
+        <i class="fas fa-sign-out-alt fa-2x"></i> Đăng xuất
+      </div>
+    </div>
+  </div>
+  <div class="col-10 p-0 m-0">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="p-4">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th scope="col">Mã dịch vụ</th>
+                <th scope="col">Tên dịch vụ</th>
+                <th scope="col">Loại</th>
+                <th scope="col">Giá</th>
+                <th scope="col">Miêu tả</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let package of Servicelist">
+                <th scope="row">{{package.id}}</th>
+                <td>{{package.name}}</td>
+                <td>{{package.type}}</td>
+                <td>{{package.price}}</td>
+
+                <td>{{package.description}}</td>
+                <td><button class="btn" (click)="edit(package.id)">Chi tiết</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary float-right px-4 mr-4" (click)="create()">Thêm</button>
+</div>

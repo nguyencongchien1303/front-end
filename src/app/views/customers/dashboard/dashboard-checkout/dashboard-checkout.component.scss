@@ -1,0 +1,9 @@
+.payment {
+    margin-top: 10px;
+    float: right;
+}
+
+.payment .btn:hover {
+    background-color: var(--color-red);
+    color: white;
+}

@@ -1,0 +1,40 @@
+<div class="p-4">
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th scope="col">*</th>
+        <th scope="col">Kích thước</th>
+        <th scope="col">Giá của kích thước</th>
+        <th scope="col">Kiểu</th>
+        <th scope="col">Giá của kiểu</th>
+        <th scope="col">Khoảng cách</th>
+        <th scope="col">Giá của khoảng cách</th>
+        <th scope="col">Thời gian giao hàng</th>
+        <th scope="col">Giá của thời gian giao hàng</th>
+        <th scope="col">Cân nặng</th>
+        <th scope="col">Giá của cân nặng</th>
+        <th scope="col">Thao tác</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of dataSource; index as i">
+      <tr>
+        <th scope="row">{{ i }}</th>
+        <td>{{ item.size }}</td>
+        <td>{{ item.priceOnSize }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.priceOnType }}</td>
+        <td>{{ item.distance }}</td>
+        <td>{{ item.priceOnDistance }}</td>
+        <td>{{ item.deliveryTime }}</td>
+        <td>{{ item.priceOnDeliveryTime }}</td>
+        <td>{{ item.weight }}</td>
+        <td>{{ item.priceOnWeight }}</td>
+
+        <td><button class="btn" (click)="edit(item.id)">Chỉnh sửa</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary float-right px-8 mr-4" (click)="create()">
+    Thêm
+  </button>
+</div>

@@ -1,0 +1,28 @@
+<div class="p-4">
+
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th scope="col">Tên tài khoản</th>
+                <th scope="col">Tên doanh nghiệp</th>
+                <th scope="col">Website</th>
+                <th scope="col">Sđt</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let enterprise of Enterpriselist">
+                <td>{{enterprise.email}}</td>
+                <td>{{enterprise.name}}</td>
+                <td>{{enterprise.website}}</td>
+                <td>{{enterprise.phone}}</td>
+                <td>{{enterprise.address}}</td>
+                <td><button type="button" (click)="editss(enterprise.id)" class="btn">Chỉnh sửa</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary float-right px-4 mr-4" (click)="add()">Thêm</button>
+</div>

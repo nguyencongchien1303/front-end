@@ -1,0 +1,20 @@
+<div class="p-4">
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th scope="col">*</th>
+        <th scope="col">Id</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Số lượng</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of dataSource; index as i">
+      <tr>
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.amount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

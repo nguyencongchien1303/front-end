@@ -1,0 +1,40 @@
+<div class="row dashboard-container">
+    <div class="col-2 m-0 left-panel">
+        <div class="p-2">
+            <div class="top-logo">
+                <a routerLink="/"><img src="/assets/images/panel-logo.png" alt="uteship" width="50%" /></a>
+            </div>
+            <a class="user-info" routerLink="profile">
+                <img src="/assets/images/cat-default.png" alt="avatar" width="80" height="80" />
+                <span>Admin</span>
+            </a>
+            <ul class="navigation-list">
+                <li class="navigation-list-item">
+                    <a routerLink="account"> Phê duyệt tài khoản </a>
+                </li>
+                <li class="navigation-list-item" routerLinkActive="active">
+                    <a routerLink="customer"> Quản lý khách hàng</a>
+                </li>
+                <li class="navigation-list-item" routerLinkActive="active">
+                    <a routerLink="service"> Quản lý gói dịch vụ</a>
+                </li>
+                <li class="navigation-list-item" routerLinkActive="active">
+                    <a routerLink="report"> Báo cáo tài chính</a>
+                </li>
+                <li class="navigation-list-item" routerLinkActive="active">
+                    <a routerLink="order">Đối soát đơn hàng</a>
+                </li>
+                <li class="navigation-list-item" routerLinkActive="active">
+                    <a routerLink="system">Tình hình hệ thống</a>
+                </li>
+
+            </ul>
+            <div class="logout">
+                <i class="fas fa-sign-out-alt fa-2x"></i> Đăng xuất
+            </div>
+        </div>
+    </div>
+    <div class="col-10 p-0 m-0">
+        <router-outlet></router-outlet>
+    </div>
+</div>

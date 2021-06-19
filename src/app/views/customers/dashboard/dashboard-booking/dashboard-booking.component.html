@@ -1,0 +1,169 @@
+<div class="booking-container">
+  <form [formGroup]="dataTypeForm">
+    <div class="row">
+      <!-- main content -->
+      <div class="col-8">
+        <!-- sender section -->
+        <span class="text-orange sender">
+          Bên gửi <i class="far fa-paper-plane"></i>
+        </span>
+        <div class="row">
+          <div class="col-6">
+            <span class="text-orange">cateye0609</span>
+            <p>khu 2, Hoàng Cương, Thanh Ba, Phú Thọ</p>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label>Chọn đơn vị vận chuyển</label>
+              <select class="form-control">
+                <option value="Xe tăng">Xe tăng</option>
+                <option value="Máy bay">Máy bay</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Chọn ca lấy hàng</label>
+              <select class="form-control">
+                <option value="Sáng">Sáng</option>
+                <option value="Tối">Tối</option>
+                <option value="Đéo lấy">Đéo lấy</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- reciever section -->
+        <span class="text-orange sender">
+          Bên nhận <i class="fab fa-mailchimp"></i>
+        </span>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label>Tên người nhận</label>
+              <input
+                formControlName="name"
+                type="text"
+                class="form-control"
+                placeholder="Tên người nhận"
+              />
+            </div>
+            <div class="form-group">
+              <label>Số điện thoại</label>
+              <input
+                formControlName="phone"
+                type="tel"
+                class="form-control"
+                placeholder="Số điện thoại"
+              />
+            </div>
+            <div class="form-group">
+              <label>Loại hàng</label>
+              <select class="form-control" formControlName="category">
+                <option value="1">Xịn</option>
+                <option value="2">Cùi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tổng khối lượng</label>
+              <input
+                formControlName="totalWeight"
+                type="number"
+                class="form-control"
+                placeholder="Tổng khối lượng"
+              />
+            </div>
+            <div class="form-group">
+              <label>Kích thước</label>
+              <div class="form-row">
+                <div class="col">
+                  <input
+                    formControlName="length"
+                    type="number"
+                    class="form-control"
+                    placeholder="Dài"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    formControlName="width"
+                    type="number"
+                    class="form-control"
+                    placeholder="Rộng"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    formControlName="height"
+                    type="number"
+                    class="form-control"
+                    placeholder="Cao"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label>Tỉnh - Thành Phố</label>
+              <input
+                formControlName="addressCity"
+                type="text"
+                class="form-control"
+                placeholder="Tỉnh - Thành Phố"
+              />
+            </div>
+            <div class="form-group">
+              <label>Quận - Huyện</label>
+              <input
+                formControlName="addressDistrict"
+                type="text"
+                class="form-control"
+                placeholder="Quận - Huyện"
+              />
+            </div>
+            <div class="form-group">
+              <label>Phường - Xã</label>
+              <input
+                formControlName="addressDistrictWard"
+                type="text"
+                class="form-control"
+                placeholder="Phường - Xã"
+              />
+            </div>
+            <div class="form-group">
+              <label>Địa chỉ</label>
+              <input
+                formControlName="address"
+                type="text"
+                class="form-control"
+                placeholder="Nổ địa chỉ"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- promo -->
+      <div class="col-4 d-flex flex-column">
+        <div class="form-group">
+          <label>Mã khuyến mãi</label>
+          <input
+            type="text"
+            class="form-control"
+            aria-describedby="promoHelp"
+          />
+          <small id="promoHelp" class="form-text text-muted">
+            Mỗi đơn hàng chỉ áp dụng 1 mã khuyến mãi.
+          </small>
+          <button class="btn btn-primary mt-2 float-right">Áp cmn dụng</button>
+        </div>
+        <div class="form-group">
+          <label>Lời nhắn</label>
+          <textarea
+            rows="10"
+            class="form-control"
+            placeholder="Viết gì đi tml..."
+          ></textarea>
+        </div>
+        <button class="btn btn-primary">Tiếp tục</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,50 @@
+<h4 class="text-center mb-4">Đăng ký</h4>
+<form [formGroup]="signUpTypeForm">
+  <div class="form-group">
+    <input formControlName="name" class="form-control" placeholder="Tên" />
+  </div>
+  <div class="form-group">
+    <input
+      formControlName="username"
+      class="form-control"
+      placeholder="Tên tài khoản"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      formControlName="phoneNumber"
+      class="form-control"
+      placeholder="Số điện thoại"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      formControlName="password"
+      type="password"
+      class="form-control"
+      required=""
+      id="password2"
+      placeholder="Mật khẩu"
+    />
+  </div>
+  <input
+    formControlName="passwordConfirm"
+    type="password"
+    class="form-control"
+    required=""
+    id="password2"
+    placeholder="Xác nhận mật khẩu"
+  />
+</form>
+<br />
+<div class="text-center d-flex flex-column align-items-center">
+  <span class="text-13">
+    Bằng cách đăng ký, bạn
+    <span class="text-red"> đồng ý </span> với
+    <span class="text-red">
+      Điều khoản & Điều kiện và Chính sách quyền riêng tư
+    </span>
+    của UTE SHIP</span
+  >
+  <button (click)="submit()" class="btn btn-primary mt-4">Đăng ký</button>
+</div>

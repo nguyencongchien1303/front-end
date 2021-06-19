@@ -1,0 +1,162 @@
+<div class="d-flex justify-content-between" *ngIf="phase !== 3">
+  <i class="fas fa-angle-left fa-2x back-icon" (click)="onBack()"></i>
+  <h4 class="text-center mb-4">{{ form_title }}</h4>
+  <div></div>
+</div>
+<!-- phase 0 -->
+<form [formGroup]="signUpTypeForm">
+  <div *ngIf="phase === 0">
+    <div class="form-group">
+      <label class="font-weight-bold">Email</label>
+      <input formControlName="email" class="form-control" placeholder="Email" />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">Số điện thoại</label>
+      <input
+        formControlName="phone"
+        class="form-control"
+        placeholder="Số điện thoại"
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">Mật khẩu</label>
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        placeholder="Mật khẩu"
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">Xác nhận Mật khẩu</label>
+      <input
+        formControlName="confirmPassword"
+        type="password"
+        class="form-control"
+        placeholder="Xác nhận mật khẩu"
+      />
+    </div>
+  </div>
+  <!-- phase 1 -->
+  <div *ngIf="phase === 1">
+    <div class="form-group">
+      <label class="font-weight-bold">Tên doanh nghiệp</label>
+      <input
+        formControlName="nameEnterprise"
+        class="form-control"
+        placeholder="Tên doanh nghiệp"
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">Địa chỉ</label>
+      <input
+        formControlName="address"
+        class="form-control"
+        placeholder="Địa chỉ"
+        type="text"
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">Lĩnh vực kinh doanh</label>
+      <input
+        formGroupName="businessAreas"
+        type="text"
+        class="form-control"
+        placeholder="Lĩnh vực kinh doanh"
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">Chức vụ</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Chức vụ"
+        formGroupName="position"
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">MST/ Mã số doanh nghiệp</label>
+      <input
+        formGroupName="taxCode"
+        type="text"
+        class="form-control"
+        placeholder="MST/ Mã số doanh nghiệp"
+      />
+    </div>
+  </div>
+  <!-- phase 2 -->
+  <div *ngIf="phase === 2">
+    <div class="form-group">
+      <label class="font-weight-bold"
+        >Bạn đang kinh doanh bằng hình thức nào
+      </label>
+      <input
+        formGroupName="businessType"
+        class="form-control"
+        placeholder="Bạn đang kinh doanh bằng hình thức nào "
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">Bạn biết đến chúng tôi từ đâu</label>
+      <input
+        formGroupName="knowFrom"
+        type="text"
+        class="form-control"
+        placeholder="Bạn biết đến chúng tôi từ đâu"
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold">Website của bạn (nếu có)</label>
+      <input
+        formGroupName="website"
+        type="text"
+        class="form-control"
+        placeholder="Website của bạn (nếu có)"
+      />
+    </div>
+    <div class="form-group">
+      <label class="font-weight-bold"
+        >Mô tả về hoạt động doanh nghiệp của bạn</label
+      >
+      <textarea
+        formGroupName="description"
+        col="3"
+        class="form-control"
+        placeholder="Mô tả về hoạt động doanh nghiệp của bạn"
+      >
+      </textarea>
+    </div>
+  </div>
+</form>
+
+<!-- phase 3 -->
+<div
+  *ngIf="phase === 3"
+  class="d-flex justify-content-center align-items-center"
+>
+  <p class="font-weight-bold">Tài khoản của bạn đang được phê duyệt</p>
+</div>
+<div class="text-center d-flex flex-column align-items-center">
+  <span class="text-13" *ngIf="phase === 0">
+    Bằng cách đăng ký, bạn
+    <span class="text-red"> đồng ý </span> với
+    <span class="text-red">
+      Điều khoản & Điều kiện và Chính sách quyền riêng tư
+    </span>
+    của UTE SHIP
+  </span>
+  <button
+    class="btn btn-primary mt-4 align-self-end"
+    (click)="onNext()"
+    *ngIf="phase !== 3"
+  >
+    Tiếp theo
+  </button>
+  <button
+    class="btn btn-primary mt-4 align-self-end"
+    (click)="onFinish()"
+    *ngIf="phase == 3"
+  >
+    Trở về
+  </button>
+</div>

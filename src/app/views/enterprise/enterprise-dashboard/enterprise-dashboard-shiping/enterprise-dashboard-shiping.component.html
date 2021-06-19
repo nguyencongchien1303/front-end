@@ -1,0 +1,27 @@
+<div class="manage-container">
+  <!-- status -->
+  <span class="badge badge-secondary active">Tất cả</span>
+  <span class="badge badge-secondary">Chờ xác nhận</span>
+  <span class="badge badge-secondary">Chờ lấy hàng</span>
+  <span class="badge badge-secondary">Đang giao</span>
+  <span class="badge badge-secondary">Đã giao</span>
+  <span class="badge badge-secondary">Đã hủy</span>
+  <!-- items list -->
+  <ng-container *ngFor="let item of [].constructor(5);">
+    <div class="row service-item">
+      <!-- item -->
+      <div class="col-4">
+        <span>
+          <i class="far fa-clipboard"></i>
+          Mã dịch vụ:
+        </span>
+      </div>
+      <div class="col-4">
+        <span>Trạng thái: </span>
+      </div>
+      <div class="col-4">
+        <span>Đơn giá: </span>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,22 @@
+<div class="p-4">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th scope="col">Mã khách hàng</th>
+                <th scope="col">Tên người nhận</th>
+                <th scope="col">Tên hàng hóa</th>
+                <th scope="col">Tình trạng</th>
+                <th scope="col">Phí dịch vụ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of Orderlist">
+                <th scope="row">{{order.id}}</th>
+                <td>{{order.toName}}</td>
+                <td>{{order.name}}</td>
+                <td>{{order.status}}</td>
+                <td>{{order.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ngx-toastr/toastr.css";
+:root {
+    --color-primary: #ff6a6a;
+    --color-red: #ff1654;
+    --color-blue: #3b76ef;
+    --color-grey: #abb4bd;
+    --color-orange: #f2994a;
+}
+
+* {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+/* Text */
+.text-13 {
+    font-size: 13px;
+}
+.text-red {
+    color: var(--color-primary);
+}
+
+.text-grey {
+    color: var(--color-grey);
+}
+
+.text-orange {
+    color: var(--color-orange);
+}
+
+/* Button */
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem rgb(255 106 106 / 25%);
+}
+
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: var(--color-red);
+    box-shadow: 0 0 0 0.2rem rgb(255 106 106 / 50%);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgb(255 106 106 / 50%);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+/* Form */
+.form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgb(255 106 106 / 25%);
+}
